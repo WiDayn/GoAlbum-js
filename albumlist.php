@@ -1,5 +1,5 @@
 <script>
-    let doubanId = "213912517";
+    var doubanId = "213912517";
 </script>
 
 
