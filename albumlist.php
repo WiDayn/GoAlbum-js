@@ -2,7 +2,6 @@
     var doubanId = "213912517";
 </script>
 
-
 <?php /*Template Name: AlbumList*/ ?>
 <!DOCTYPE html>  
 <?php 
@@ -74,8 +73,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
                 var count = 1;
                 let row;
 
-                console.log(obj.data.list)
-
                 for (let item of obj.data.list) {
                     if (count % 4 === 1) {
                         row = document.createElement("div");
@@ -94,17 +91,17 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
             }
         };
     }
-
-    loadPage();
-
+    
     window.onscroll = function () {
-        if (getScrollHeight() <= getWindowHeight() + getDocumentTop()) {
+        if (getScrollHeight() <= getWindowHeight() + getDocumentTop() + 10) {
             console.log("到底啦");
             startIndex += 16;
             loadPage();
         }
 
     }
+    
+    loadPage();
 
 </script>
 
